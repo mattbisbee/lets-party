@@ -15,7 +15,7 @@ const Header = () => {
         />
         <div className="btn-list">
           <a href="#" className="btn-contact">
-            Start
+            Shop Now
           </a>
         </div>
       </div>

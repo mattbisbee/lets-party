@@ -35,22 +35,22 @@ const Nav = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black text-uppercase ml-5">about</a>
+              <a className="nav-link text-black text-uppercase ml-5">My Account</a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">
-                Shopping Cart
+                Cart
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black text-uppercase ml-5">Orders</a>
+              <a className="nav-link text-black text-uppercase ml-5">Sign in or Create an account</a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">LogIn</a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">LogOut</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

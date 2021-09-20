@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-particles-js";
-import Nav from "./components/Navbar";
+import Nav from "./components/Nav";
 import Header from "./components/Header";
 import MyAccount from "./components/MyAccount";
 

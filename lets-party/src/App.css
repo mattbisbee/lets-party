@@ -161,3 +161,52 @@ nav ul li {
     display: none;
   }
 }
+
+/******my account*****/
+
+
+
+/*************categories*******/
+
+.text-uppercase {
+  color: var(--clr-dark);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.pro-wrapper {
+  background: rgb(218, 199, 137);
+  padding: 3rem 0;
+}
+
+.port-img {
+  width: 20rem;
+  height: 10rem;
+  border: 2px solid var(--clr-blue);
+  padding: 0 0.5rem;
+}
+
+.port-img:hover,
+.port-item:focus {
+  transform: scale(1.2);
+  opacity: 0.25;
+  cursor: pointer;
+}
+.port-img {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.pro-image-box {
+  position: relative;
+  margin: 0.5rem;
+}
+.image-box-wrapper {
+  display: flex !important;
+}
+@media (max-width: 768px) {
+  .text-uppercase {
+    padding-top: 0;
+    padding-bottom: 1rem !important;
+  }
+}

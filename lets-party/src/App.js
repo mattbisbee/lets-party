@@ -4,6 +4,8 @@ import Particles from "react-particles-js";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import MyAccount from "./components/MyAccount";
+import Categories from "./components/Categories";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
       <Nav />
       <Header />
       <MyAccount />
+      <Categories />
+      <Footer />
     </>
   );
 }

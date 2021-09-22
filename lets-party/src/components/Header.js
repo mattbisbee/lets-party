@@ -8,7 +8,14 @@ const Header = () => {
         <h1>in One Basket</h1>
         <Typed
           className="typed-text"
-          strings={["Drinks", "Cookies", "Deseret", "GiftBasket"]}
+          strings={[
+            "Chocolates",
+            "Flowers",
+            "Cookies",
+            "Journals",
+            "TeddyBears",
+            "Blankets",
+          ]}
           typeSpeed={40}
           backSpeed={60}
           loop

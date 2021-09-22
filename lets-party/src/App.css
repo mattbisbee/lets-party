@@ -164,8 +164,6 @@ nav ul li {
 
 /******my account*****/
 
-
-
 /*************categories*******/
 
 .text-uppercase {
@@ -209,4 +207,26 @@ nav ul li {
     padding-top: 0;
     padding-bottom: 1rem !important;
   }
+}
+
+/******footer***********/
+.footer {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--clr-rose);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--clr-turquoise);
+  cursor: pointer;
+}
+
+.footer p {
+  padding: 0%;
 }

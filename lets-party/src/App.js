@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import MyAccount from "./components/MyAccount";
 import Categories from "./components/Categories";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Header />
       <MyAccount />
       <Categories />
+      <Footer />
     </>
   );
 }

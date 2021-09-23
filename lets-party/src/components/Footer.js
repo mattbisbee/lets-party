@@ -3,6 +3,7 @@ import { Facebook } from "react-bootstrap-icons";
 import { Google } from "react-bootstrap-icons";
 import { Instagram } from "react-bootstrap-icons";
 import { Twitter } from "react-bootstrap-icons";
+import { Reddit } from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
@@ -44,6 +45,15 @@ const Footer = () => {
                 rel="noreferrer"
               >
                 <Twitter />
+              </a>
+            </div>
+            <div className="col ">
+              <a
+                href="https://www.reddit.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Reddit />
               </a>
             </div>
           </div>

@@ -22,7 +22,7 @@ function App() {
               },
             },
             shape: {
-              type: "starts",
+              type: "star",
               stroke: {
                 width: 6,
                 color: "#ea33ff",
@@ -33,7 +33,7 @@ function App() {
       />
       <Nav />
       <Header />
-      <MyAccount />
+      {/* <MyAccount /> */}
       <Categories />
       <Footer />
     </>

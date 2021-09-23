@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
+import { Basket3Fill } from "react-bootstrap-icons";
 
 const Nav = () => {
   return (
@@ -27,12 +29,14 @@ const Nav = () => {
         >
           <ul className="navbar-nav m-auto ">
             <li className="nav-item active">
-              <a
+              <Link
+                smooth={true}
+                to="Home"
                 className="nav-link text-black text-uppercase ml-5 "
                 aria-current="page"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">
@@ -40,7 +44,9 @@ const Nav = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black text-uppercase ml-5">Cart</a>
+              <a className="nav-link text-black text-uppercase ml-5">
+                <Basket3Fill />
+              </a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">
@@ -48,7 +54,13 @@ const Nav = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black text-uppercase ml-5">Contact</a>
+              <Link
+                smooth={true}
+                to="footer"
+                className="nav-link text-black text-uppercase ml-5"
+              >
+                Contact
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">LogOut</a>

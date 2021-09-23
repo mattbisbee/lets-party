@@ -248,7 +248,7 @@ nav ul li {
 
 .footer a:hover {
   text-decoration: none;
-  color: var(--clr-turquoise);
+  color: var(--clr-pink);
   cursor: pointer;
 }
 

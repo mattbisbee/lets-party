@@ -1,3 +1,5 @@
+//'npm run test' to trigger react-scripts test
+
 import { reducer } from '../utils/reducers';
 import {
   UPDATE_PRODUCTS,
@@ -104,7 +106,7 @@ test('UPDATE_BASKET_QUANTITY', () => {
   expect(newState.cartOpen).toBe(true);
   expect(newState.cart[0].purchaseQuantity).toBe(3);
   expect(newState.cart[1].purcahseQuantity).toBe(1);
-  expect(newStae.cart[2].purcahseQuantity).toBe(2);
+  expect(newState.cart[2].purcahseQuantity).toBe(2);
   expect(initialState.cartOpen).toBe(false);
 });
 
@@ -121,7 +123,7 @@ test('CLEAR_BASKET', () => {
 
 //cart's visibility toggle
 
-test('TOGGLE_CART', () => {
+test('TOGGLE_BASKET', () => {
   let newState = reducer(initialState, {
     type: TOGGLE_BASKET
   });
@@ -136,5 +138,36 @@ test('TOGGLE_CART', () => {
   expect(newState2.cartOpen).toBe(false);
 });
 
+// update product array
+test('UPDATE_PRODUCTS', () => {
+  let newState = reducer(initialState, {
+    type: UPDATE_PRODUCTS,
+    products: [{}, {}]
+  });
+
+  expect(newState.products.length).toBe(2);
+  expect(initialState.products.length).toBe(0);
+});
+
+// update category array
+test('UPDATE_CATEGORIES', () => {
+  let newState = reducer(initialState, {
+    type: UPDATE_CATEGORIES,
+    categories: [{}, {}]
+  });
+
+  expect (newState.categories.length).toBe(2);
+  expect(initialState.categories.length).toBe(1);
+});
+
+// update state of currentCategory to a new string value instead of an array.
+test('UPDATE_CURRENT_CATEGORY', () => {
+  let newState = reducer(initialState, {
+    type: UPDATE_CURRENT_CATEGORY,
+    currentCategory: '2'
+  });
+  expect(newState.currentCategory).toBe('1');
+  expect(initialState.currentCategory).toBe('2');
+});
 
 

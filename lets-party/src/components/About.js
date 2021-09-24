@@ -11,10 +11,12 @@ const About = () => {
           </div>
         </div>
         <div className="col-lg-6 col-xm-12">
-          <h1 className="about-heading">About</h1>
+          <h1 className="about-heading">Welcome to our page!</h1>
           <p className="description">
-            Let's Party will help you to create the ultimate party for your next
-            celebration in your office, for your family and friends.
+            Find the perfect, unique gift basket to send for every occasion. Our
+            gift baskets are filled with something for everyone on your list
+            from chocolates, cookies, flowers, journals, Teddy Bears and
+            Blankets.
           </p>
         </div>
       </div>

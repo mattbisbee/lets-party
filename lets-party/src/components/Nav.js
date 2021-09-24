@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import { Basket3Fill } from "react-bootstrap-icons";
+import { House } from "react-bootstrap-icons";
+import { PersonFill } from "react-bootstrap-icons";
 
 const Nav = () => {
   return (
@@ -35,24 +37,15 @@ const Nav = () => {
                 className="nav-link text-black text-uppercase ml-5 "
                 aria-current="page"
               >
-                Home
+                <House />
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">
                 My Account
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-black text-uppercase ml-5">
-                <Basket3Fill />
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-black text-uppercase ml-5">
-                Sign in or Create an account
-              </a>
-            </li>
+            </li> */}
+
             <li className="nav-item">
               <Link
                 smooth={true}
@@ -62,8 +55,20 @@ const Nav = () => {
                 Contact
               </Link>
             </li>
+
             <li className="nav-item">
+              <a className="nav-link text-black text-uppercase ml-5">
+                {/* Sign in or Create an account */}
+                <PersonFill />
+              </a>
+            </li>
+            {/* <li className="nav-item">
               <a className="nav-link text-black text-uppercase ml-5">LogOut</a>
+            </li> */}
+            <li className="nav-item">
+              <a className="nav-link text-black text-uppercase ml-5">
+                <Basket3Fill />
+              </a>
             </li>
           </ul>
         </div>

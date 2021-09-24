@@ -33,7 +33,6 @@ function App() {
       />
       <Nav />
       <Header />
-      {/* <MyAccount /> */}
       <Categories />
       <Footer />
     </>

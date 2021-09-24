@@ -92,3 +92,49 @@ test('REMOVE_FROM_BASKET', () => {
   //intitialState
   expect(initialState.cart.length).toBe(3);
 });
+
+//update the first items quantity only
+test('UPDATE_BASKET_QUANTITY', () => {
+  let newState = reducer(initialState, {
+    type: UPDATE_BASKET_QUANTITY,   
+    _id: '1',
+    purchaseQuantity: 3
+  });
+
+  expect(newState.cartOpen).toBe(true);
+  expect(newState.cart[0].purchaseQuantity).toBe(3);
+  expect(newState.cart[1].purcahseQuantity).toBe(1);
+  expect(newStae.cart[2].purcahseQuantity).toBe(2);
+  expect(initialState.cartOpen).toBe(false);
+});
+
+// empty cart test
+test('CLEAR_BASKET', () => {
+  let newState = reducer(initialState, {
+    type: CLEAR_BASKET
+  });
+
+  expect(newState.cartOpen).toBe(false);
+  expect(newState.cart.length).toBe(0);
+  expect(initialState.cart.length).toBe(3);
+});
+
+//cart's visibility toggle
+
+test('TOGGLE_CART', () => {
+  let newState = reducer(initialState, {
+    type: TOGGLE_BASKET
+  });
+
+  expect(newState.cartOpen).toBe(true);
+  expect(initialState.cartOpen).toBe(false);
+
+  let newState2 = reducer(newState, {
+    type: TOGGLE_BASKET
+  });
+
+  expect(newState2.cartOpen).toBe(false);
+});
+
+
+

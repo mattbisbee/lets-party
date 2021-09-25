@@ -167,6 +167,12 @@ nav ul li {
 .description {
   text-align: center;
 }
+.deli {
+  margin-top: 3rem;
+  color: var(--clr-pink);
+  font-size: x-large;
+  font-weight: bold;
+}
 .photo-wrap {
   display: flex;
   justify-content: center;

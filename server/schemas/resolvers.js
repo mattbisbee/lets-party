@@ -1,9 +1,9 @@
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
-const stripe = require('stripe')('process.env.STRIPE_KEY');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
-require('dotenv').config();
+//require('dotenv').config();
 
 const resolvers = {
     Query: {
@@ -60,6 +60,8 @@ const resolvers = {
             const url = new URL(context.headers.referer).origin;
             //Using 'Order' Mongoose Model to covert these ids into populated product objects
             const order = new Order({ products: args.products });
+            
+
             const { products } = await order.populate('products').execPopulate();
 
             // use Stripe API to create a product ID and a price ID for each item. Loops over products from the 'Order' model and pushes price ID for each one into a new 'line_items" array
@@ -70,7 +72,7 @@ const resolvers = {
                 const product = await stripe.products.create({
                     name: products[i].name,
                     description: products[i].description,
-                    images: [`${url}/images/$${products[i].image}`]
+                    images: [`${url}/images/${products[i].image}`]
                 });
                 // price id
                 const price = await stripe.prices.create({
@@ -93,9 +95,9 @@ const resolvers = {
                 success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
                 cancel_url: `${url}`
             });
-
             return { session: session.id }
         }
+        
     },
     Mutation: {
         addUser: async (parent, args) => {

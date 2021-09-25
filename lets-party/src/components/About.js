@@ -1,5 +1,5 @@
 import React from "react";
-import pineapple from "../pics/pineapple.jpg";
+import basket5 from "../pics/basket5.jpg";
 
 const About = () => {
   return (
@@ -7,7 +7,7 @@ const About = () => {
       <div className="row">
         <div className="col-lg-6 col-xm-12">
           <div className="photo-wrap mb-5">
-            <img className="profile-img" src={pineapple} alt="Pineapple" />
+            <img className="profile-img" src={basket5} alt="Pineapple" />
           </div>
         </div>
         <div className="col-lg-6 col-xm-12">

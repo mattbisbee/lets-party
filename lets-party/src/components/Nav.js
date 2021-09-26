@@ -33,7 +33,7 @@ const Nav = () => {
             <li className="nav-item active">
               <Link
                 smooth={true}
-                to="Home"
+                to="/"
                 className="nav-link text-black text-uppercase ml-5 "
                 aria-current="page"
               >
@@ -43,7 +43,7 @@ const Nav = () => {
             <li className="nav-item">
               <Link
                 smooth={true}
-                to="About"
+                to="/"
                 className="nav-link text-black text-uppercase ml-5"
               >
                 About
@@ -53,10 +53,20 @@ const Nav = () => {
             <li className="nav-item">
               <Link
                 smooth={true}
-                to="footer"
+                to="/contact"
                 className="nav-link text-black text-uppercase ml-5"
               >
                 Contact
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                smooth={true}
+                to="/cart"
+                className="nav-link text-black text-uppercase ml-5"
+              >
+                Cart
               </Link>
             </li>
 

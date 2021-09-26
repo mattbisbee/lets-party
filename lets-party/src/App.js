@@ -7,37 +7,19 @@ import MyAccount from "./components/MyAccount";
 import Categories from "./components/Categories";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import { BrowserRouter as Router, Route} from "react-router-dom"
+import Home from "./pages/home"
+import Contact from "./pages/contact"
+import Cart from "./pages/cart"
 
 function App() {
   return (
-    <>
-      <Particles
-        className="particles-canvas"
-        params={{
-          particles: {
-            number: {
-              value: 30,
-              density: {
-                enable: true,
-                value_area: 900,
-              },
-            },
-            shape: {
-              type: "star",
-              stroke: {
-                width: 6,
-                color: "#ea33ff",
-              },
-            },
-          },
-        }}
-      />
-      <Nav />
-      <Header />
-      <About />
-      <Categories />
-      <Footer />
-    </>
+  
+     <Router>
+       <Route  exact path = "/" component = {Home} />
+       <Route  exact path = "/contact" component = {Contact} />
+       <Route  exact path = "/cart" component = {Cart} />
+     </Router>
   );
 }
 

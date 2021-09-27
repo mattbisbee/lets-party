@@ -281,7 +281,7 @@ nav ul li {
 
 /*********reviews**********/
 .reviews {
-  background-image: url(./pics/lily.jpg);
+  background-image: url(./pics/pinkMacroon.jpg);
   background-size: cover;
   background-color: var(--clr-dark);
   text-align: center;
@@ -298,9 +298,26 @@ nav ul li {
   text-align: center;
   max-width: 53.125rem;
   margin: 0 auto 2rem auto;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--clr-turquoise);
+}
+.myCarousel {
+  color: var(--clr-light);
+  background: transparent;
+  margin-top: -6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 17.875rem;
 }
 
+.carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;
+}
 /******footer***********/
 .footer {
   background: var(--clr-dark);

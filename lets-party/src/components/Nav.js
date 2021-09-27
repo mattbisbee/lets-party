@@ -43,7 +43,7 @@ const Nav = () => {
             <li className="nav-item">
               <Link
                 smooth={true}
-                to="About"
+                to="about"
                 className="nav-link text-black text-uppercase ml-5"
               >
                 About

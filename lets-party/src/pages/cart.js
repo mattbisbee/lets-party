@@ -17,11 +17,11 @@ function Contact(){
 				<div class="panel-heading">
 					<div class="panel-title">
 						<div class="row">
-							<div class="col-xs-6">
+							<div class="col-xs-6 mt-5">
 								<h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
 							</div>
-							<div class="col-xs-6">
-								<button type="button" class="btn btn-primary btn-sm btn-block">
+							<div class="col-xs-6 mb-1">
+								<button type="button" class="btn btn-outline-primary">
 									<span class="glyphicon glyphicon-share-alt"></span> Continue shopping
 								</button>
 							</div>
@@ -77,7 +77,7 @@ function Contact(){
 								<h6 class="text-right">Added items?</h6>
 							</div>
 							<div class="col-xs-3">
-								<button type="button" class="btn btn-default btn-sm btn-block">
+								<button type="button" class="btn btn-outline-primary mb-2">
 									Update cart
 								</button>
 							</div>
@@ -89,8 +89,8 @@ function Contact(){
 						<div class="col-xs-9">
 							<h4 class="text-right">Total <strong>$50.00</strong></h4>
 						</div>
-						<div class="col-xs-3">
-							<button type="button" class="btn btn-success btn-block">
+						<div class="col-xs-3 mb-5">
+							<button type="button" class="btn btn-outline-warning mx-auto mb-5">
 								Checkout
 							</button>
 						</div>

@@ -7,6 +7,7 @@ import MyAccount from "./components/MyAccount";
 import Categories from "./components/Categories";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Reviews from "./components/Reviews";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Header />
       <About />
       <Categories />
+      <Reviews />
       <Footer />
     </>
   );

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mattbisbee/lets-party/issues"
   },
-  "homepage": "https://github.com/mattbisbee/lets-party#readme"
+  "homepage": "https://github.com/mattbisbee/lets-party#readme",
+  "dependencies": {
+    "react-responsive-carousel": "^3.2.21"
+  }
 }

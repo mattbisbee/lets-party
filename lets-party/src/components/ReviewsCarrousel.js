@@ -7,21 +7,22 @@ import User3 from "../pics/user3.jpg";
 
 const ReviewsCarrousel = () => {
   return (
-    <Carousel>
+    <Carousel
       showArrows={true}
       infinityLoop={true}
       showThumbs={false}
       showStatus={false}
       autoPlay={true}
       interval={3000}
+    >
       <>
         <img src={User1} alt="John Doe" />
         <div className="myCarousel">
           <h3>John Doe</h3>
           <p>
             I really love this website, I send a basket of chocolates, flowers
-            and a teddy Bear to my now, now she is my girlfriend, the basket was
-            so cute and she love it! Thank you guys!
+            and a teddy Bear to my now girlfriend, the basket was so cute and
+            she love it! Thank you guys!
           </p>
         </div>
       </>

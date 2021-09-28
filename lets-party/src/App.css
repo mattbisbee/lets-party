@@ -281,7 +281,7 @@ nav ul li {
 
 /*********reviews**********/
 .reviews {
-  background-image: url(./pics/pinkMacroon.jpg);
+  background-image: url(./pics/truffle1.jpg);
   background-size: cover;
   background-color: var(--clr-dark);
   text-align: center;
@@ -291,6 +291,7 @@ nav ul li {
 }
 .reviews h1 {
   color: var(--clr-pink);
+  font-weight: bold;
   padding: 3rem 0;
 }
 
@@ -298,7 +299,7 @@ nav ul li {
   text-align: center;
   max-width: 53.125rem;
   margin: 0 auto 2rem auto;
-  background: var(--clr-turquoise);
+  background: transparent;
 }
 .myCarousel {
   color: var(--clr-light);
@@ -317,6 +318,27 @@ nav ul li {
 .carousel .slide img {
   width: 10rem !important;
   border-radius: 50%;
+}
+.myCarousel h3 {
+  color: var(--clr-accent);
+  font-weight: 600;
+}
+
+.myCarousel p {
+  color: var(--clr-light);
+}
+.carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;
+}
+.carousel .slide {
+  background: transparent !important;
+  height: 100% !important;
+  padding-top: 2rem;
+}
+.carousel-root {
+  margin: auto !important;
+  margin-top: 3% !important;
 }
 /******footer***********/
 .footer {

@@ -8,7 +8,10 @@ import { PersonFill } from "react-bootstrap-icons";
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <div
+      id="home"
+      className="navbar navbar-expand-lg navbar-light bg-dark fixed-top"
+    >
       <div className="container">
         {/* <a className="navbar-brand" href="#"> */}
         {/* <img className="logo" src={Logo} alt="logo" />
@@ -37,13 +40,14 @@ const Nav = () => {
                 className="nav-link text-black text-uppercase ml-5 "
                 aria-current="page"
               >
-                <House />
+                Home
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 smooth={true}
                 to="about"
+                offset={-110}
                 className="nav-link text-black text-uppercase ml-5"
               >
                 About
@@ -77,7 +81,7 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

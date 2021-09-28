@@ -71,7 +71,7 @@ nav ul li {
     url(./pics/table.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -131,7 +131,7 @@ nav ul li {
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
   color: var(--clr-accent);
   font-size: large;
-  /* text-transform: uppercase; */
+  cursor: pointer;
   margin: 2rem;
   text-decoration: none;
 }
@@ -210,9 +210,8 @@ nav ul li {
 
 /*************categories*******/
 
-.text-uppercase {
-  color: var(--clr-dark);
-  text-transform: uppercase;
+.text {
+  color: rgb(71, 52, 52);
   font-weight: bold;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -265,6 +264,10 @@ nav ul li {
 .hyper-link:hover {
   cursor: pointer;
   color: var(--clr-blue);
+}
+
+.popupbox-wrapper {
+  margin-top: 7rem;
 }
 /******media************/
 

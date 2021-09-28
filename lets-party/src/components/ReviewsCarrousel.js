@@ -29,7 +29,7 @@ const ReviewsCarrousel = () => {
       <>
         <img src={User2} alt="Bob Doe" />
         <div className="myCarousel">
-          <h3>John Doe</h3>
+          <h3>Bob Doe</h3>
           <p>
             I bought a basket of cookies, journals and teddy bears to my grandma
             and she was very happy about, it was delivered on time.
@@ -39,7 +39,7 @@ const ReviewsCarrousel = () => {
       <>
         <img src={User3} alt="Mary Doe" />
         <div className="myCarousel">
-          <h3>John Doe</h3>
+          <h3>Mary Doe</h3>
           <p>
             My mom was sick in the hospital and I couldn't visit her cuz I was
             out of Country but she received a basket of blanket, teddy bear,

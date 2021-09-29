@@ -38,37 +38,49 @@ const Categories = () => {
     const content = (
       <>
         <b>Please make your selection:</b>
-        <div class="container">
+        <div className="container">
           <form action="selection">
-            <div class="row justify-content-start">
-              <div class="col-6">
-                <img className="pro-img-popupbox" src={Carmel1} alt="carmel" />
+            <div className="row justify-content-start">
+              <div className="col-6">
+                <img
+                  className="pro-img-popupbox"
+                  src={Carmel1} alt="carmel" 
+                  alt="carmel"
+                  loading="lazy"
+                />
                 <input type="checkbox" id="carmel" name="carmel" />
                 <label for="carmel"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Pbuttercup}
                   alt="pbuttercup"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="peanutbutter" name="peanutbutter" />
                 <label for="peanutbutter"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Truffle1}
                   alt="truffle"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="truffle" name="truffle" />
                 <label for="truffle"></label>
               </div>
 
-              <div class="col-6">
-                <img className="pro-img-popupbox" src={Cakepop} alt="cakepop" />
+              <div className="col-6">
+                <img 
+                  className="pro-img-popupbox"
+                  src={Cakepop}
+                  alt="cakepop"
+                  loading="lazy"
+                />
                 <input type="checkbox" id="cakepop" name="cakepop" />
                 <label for="carmel"></label>
               </div>
@@ -96,32 +108,48 @@ const Categories = () => {
     const content = (
       <>
         <b>Please make your selection:</b>
-        <div class="container">
+        <div className="container">
           <form action="selection">
-            <div class="row justify-content-start">
-              <div class="col-6">
-                <img className="pro-img-popupbox" src={Lily} alt="lily" />
+            <div className="row justify-content-start">
+              <div className="col-6">
+                <img 
+                  className="pro-img-popupbox" 
+                  src={Lily} 
+                  alt="lily"
+                  loading="lazy" 
+                  />
                 <input type="checkbox" id="lily" name="lily" />
                 <label for="lily"></label>
               </div>
 
-              <div class="col-6">
-                <img className="pro-img-popupbox" src={Rose} alt="Rose" />
+              <div className="col-6">
+                <img 
+                  className="pro-img-popupbox" 
+                  src={Rose} 
+                  alt="Rose"
+                  loading="lazy" 
+                />
                 <input type="checkbox" id="rose" name="rose" />
                 <label for="rose"></label>
               </div>
 
-              <div class="col-6">
-                <img className="pro-img-popupbox" src={White} alt="truffle" />
+              <div className="col-6">
+                <img 
+                  className="pro-img-popupbox" 
+                  src={White} 
+                  alt="truffle"
+                  loading="lazy" 
+                />
                 <input type="checkbox" id="white" name="white rose" />
                 <label for="white"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Sunflower}
                   alt="sunflower"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="sunflower" name="sunflower" />
                 <label for="sunflower"></label>
@@ -151,44 +179,48 @@ const Categories = () => {
     const content = (
       <>
         <b>Please make your selection:</b>
-        <div class="container">
+        <div className="container">
           <form action="selection">
-            <div class="row justify-content-start">
-              <div class="col-6">
+            <div className="row justify-content-start">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Snickerdood}
                   alt="snickerdood"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="snickerdood" name="snickerdood" />
                 <label for="snickerdood"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Pbcookie}
                   alt="peanutbuttercookie"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="pbcookie" name="pbcookie" />
                 <label for="pbcookie"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Chocchip}
                   alt="truffle"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="chocchip" name="chocchip" />
                 <label for="chocchip"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Macaroon}
                   alt="macaroon"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="macaroon" name="macaroon" />
                 <label for="macaroon"></label>
@@ -217,36 +249,43 @@ const Categories = () => {
     const content = (
       <>
         <b>Please make your selection:</b>
-        <div class="container">
+        <div className="container">
           <form action="selection">
-            <div class="row justify-content-start">
-              <div class="col-6">
-                <img className="pro-img-popupbox" src={Blankblue} alt="blue" />
+            <div className="row justify-content-start">
+              <div className="col-6">
+                <img 
+                  className="pro-img-popupbox" 
+                  src={Blankblue} 
+                  alt="blue"
+                  loading="lazy" 
+                />
                 <input type="checkbox" id="blue" name="blue" />
                 <label for="blue"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Blankred}
                   alt="pbuttercup"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="red" name="red" />
                 <label for="red"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Blankwhite}
                   alt="truffle"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="white" name="white" />
                 <label for="white"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img className="pro-img-popupbox" src={Notepad} alt="notepad" />
                 <input type="checkbox" id="notepad" name="notepad" />
                 <label for="notepad"></label>
@@ -276,40 +315,43 @@ const Categories = () => {
     const content = (
       <>
         <b>Please make your selection:</b>
-        <div class="container">
+        <div className="container">
           <form action="selection">
-            <div class="row justify-content-start">
-              <div class="col-6">
+            <div className="row justify-content-start">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Tbear1}
                   alt="teddybear1"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="teddybear1" name="teddybear1" />
                 <label for="teddybear1"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Tbear2}
                   alt="pbuttercup"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="teddybear2" name="teddybear2" />
                 <label for="teddybear2"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img className="pro-img-popupbox" src={Tbear3} alt="truffle" />
                 <input type="checkbox" id="teddybear3" name="teddybear3" />
                 <label for="teddybear3"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Tbear4}
                   alt="teddybear4"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="teddybear4" name="teddybear14" />
                 <label for="teddybear4"></label>
@@ -339,44 +381,48 @@ const Categories = () => {
     const content = (
       <>
         <b>Please make your selection:</b>
-        <div class="container">
+        <div className="container">
           <form action="selection">
-            <div class="row justify-content-start">
-              <div class="col-6">
+            <div className="row justify-content-start">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Blueblanket}
                   alt="blue"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="blue" name="blue" />
                 <label for="blue"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Whiteblanket}
                   alt="pbuttercup"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="white" name="white" />
                 <label for="white"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Tanblanket}
                   alt="truffle"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="tan" name="tan" />
                 <label for="tan"></label>
               </div>
 
-              <div class="col-6">
+              <div className="col-6">
                 <img
                   className="pro-img-popupbox"
                   src={Purpleblanket}
                   alt="purple"
+                  loading="lazy"
                 />
                 <input type="checkbox" id="purple" name="purple" />
                 <label for="purple"></label>
@@ -406,39 +452,63 @@ const Categories = () => {
       <div className="container">
         <h1 className="text text-center">Start to make your Basket with: </h1>
         <div className="row">
-          <div class="col-md-4">
+          <div className="col-md-4">
             <div className="pro-image-box" onClick={openPopupboxChocolates}>
-              <img className="port-img" src={Chocolates} alt="basket1" />
+              <img 
+                className="port-img" 
+                src={Chocolates} 
+                alt="basket1"
+              />
               <div className="overflow"></div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div className="col-md-4">
             <div className="pro-image-box" onClick={openPopupboxFlowers}>
-              <img className="port-img" src={Flowers} alt="basket2" />
+              <img 
+                className="port-img" 
+                src={Flowers} 
+                alt="basket2" 
+              />
               <div className="overflow"></div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div className="col-md-4">
             <div className="pro-image-box" onClick={openPopupboxCookies}>
-              <img className="port-img" src={Mockaroon} alt="basket13" />
+              <img 
+                className="port-img" 
+                src={Mockaroon} 
+                alt="basket13" 
+              />
               <div className="overflow"></div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div className="col-md-4">
             <div className="pro-image-box " onClick={openPopupboxBooks}>
-              <img className="port-img" src={Books} alt="basket4" />
+              <img 
+                className="port-img" 
+                src={Books} 
+                alt="basket4" 
+              />
               <div className="overflow"></div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div className="col-md-4">
             <div className="pro-image-box" onClick={openPopupboxToys}>
-              <img className="port-img" src={Toys} alt="basket5" />
+              <img 
+                className="port-img" 
+                src={Toys} 
+                alt="basket5" 
+              />
               <div className="overflow"></div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div className="col-md-4">
             <div className="pro-image-box" onClick={openPopupboxBlankets}>
-              <img className="port-img" src={Blankets} alt="basket6" />
+              <img 
+                className="port-img" 
+                src={Blankets} 
+                alt="basket6" 
+              />
               <div className="overflow"></div>
             </div>
           </div>

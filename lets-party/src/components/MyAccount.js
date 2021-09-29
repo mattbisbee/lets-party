@@ -9,32 +9,32 @@ const MyAccount = () => {
           <label>Username</label>
           <input
             type="username"
-            class="form-control"
+            className="form-control"
             id="username"
             placeholder="Enter username"
             name="username"
           />
-          <div class="form-group">
+          <div className="form-group">
             <label for="email">Email:</label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="email"
               placeholder="Enter email"
               name="email"
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="pwd">Password:</label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="pwd"
               placeholder="Enter password"
               name="pswd"
             />
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Create
           </button>
         </div>
@@ -42,32 +42,32 @@ const MyAccount = () => {
 
       <h2>My Account</h2>
       <form action="my account">
-        <div class="form-group">
+        <div className="form-group">
           <label for="email">Email:</label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="email"
             placeholder="Enter email"
             name="email"
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="pwd">Password:</label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="pwd"
             placeholder="Enter password"
             name="pswd"
           />
         </div>
-        <div class="form-group form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember" />
+        <div className="form-group form-check">
+          <label className="form-check-label">
+            <input className="form-check-input" type="checkbox" name="remember" />
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>

@@ -14,8 +14,11 @@ const Header = () => {
             "Flowers",
             "Cookies",
             "Journals",
-            "TeddyBears",
-            " and or Blankets!!!",
+            "Teddy Bears",
+            "Blankets",
+            "Baby Showers",
+            "Office Parties",
+            "Birthdays"
           ]}
           typeSpeed={40}
           backSpeed={60}

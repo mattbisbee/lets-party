@@ -71,7 +71,7 @@ nav ul li {
     url(./pics/table.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -131,7 +131,7 @@ nav ul li {
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
   color: var(--clr-accent);
   font-size: large;
-  /* text-transform: uppercase; */
+  cursor: pointer;
   margin: 2rem;
   text-decoration: none;
 }
@@ -210,9 +210,8 @@ nav ul li {
 
 /*************categories*******/
 
-.text-uppercase {
-  color: var(--clr-dark);
-  text-transform: uppercase;
+.text {
+  color: rgb(71, 52, 52);
   font-weight: bold;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -266,6 +265,10 @@ nav ul li {
   cursor: pointer;
   color: var(--clr-blue);
 }
+
+.popupbox-wrapper {
+  margin-top: 7rem;
+}
 /******media************/
 
 @media (max-width: 768px) {
@@ -277,6 +280,68 @@ nav ul li {
   .pro-img-popupbox {
     width: 100%;
   }
+}
+
+/*********reviews**********/
+.reviews {
+  background-image: url(./pics/truffle1.jpg);
+  background-size: cover;
+  background-color: var(--clr-dark);
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+.reviews h1 {
+  color: var(--clr-pink);
+  font-weight: bold;
+  padding: 3rem 0;
+}
+
+.rev-content {
+  text-align: center;
+  max-width: 53.125rem;
+  margin: 0 auto 2rem auto;
+  background: transparent;
+}
+.myCarousel {
+  color: var(--clr-light);
+  background: transparent;
+  margin-top: -6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 17.875rem;
+}
+
+.carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;
+}
+.myCarousel h3 {
+  color: var(--clr-accent);
+  font-weight: 600;
+}
+
+.myCarousel p {
+  color: var(--clr-light);
+}
+.carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;
+}
+.carousel .slide {
+  background: transparent !important;
+  height: 100% !important;
+  padding-top: 2rem;
+}
+.carousel-root {
+  margin: auto !important;
+  margin-top: 3% !important;
 }
 /******footer***********/
 .footer {

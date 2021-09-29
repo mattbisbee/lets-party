@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
+import Categories from "./Categories";
 
 const Header = () => {
   return (
@@ -21,7 +22,7 @@ const Header = () => {
           loop
         />
         <div className="btn-list">
-          <a href="#" className="btn-contact">
+          <a href={Categories} className="btn-contact">
             Shop Now
           </a>
         </div>

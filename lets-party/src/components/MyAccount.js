@@ -2,7 +2,7 @@ import React from "react";
 
 const MyAccount = () => {
   return (
-    <div className="container">
+    <div id="myaccount" className="container">
       <form action="login">
         <div className="Register">
           <h1>Create an Account</h1>

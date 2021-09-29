@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
+import Categories from "./Categories";
 
 const Header = () => {
   return (
@@ -9,19 +10,19 @@ const Header = () => {
         <Typed
           className="typed-text"
           strings={[
-            "Chocolates",
+            "Make your Basket with Chocolates",
             "Flowers",
             "Cookies",
             "Journals",
             "TeddyBears",
-            "Blankets",
+            " and or Blankets!!!",
           ]}
           typeSpeed={40}
           backSpeed={60}
           loop
         />
         <div className="btn-list">
-          <a href="#" className="btn-contact">
+          <a href={Categories} className="btn-contact">
             Shop Now
           </a>
         </div>

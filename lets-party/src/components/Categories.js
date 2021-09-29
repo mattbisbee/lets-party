@@ -404,7 +404,7 @@ const Categories = () => {
   return (
     <div id="categories" className="pro-wrapper">
       <div className="container">
-        <h1 className="text-uppercase text-center">Please choose from:</h1>
+        <h1 className="text text-center">Start to make your Basket with: </h1>
         <div className="row">
           <div class="col-md-4">
             <div className="pro-image-box" onClick={openPopupboxChocolates}>

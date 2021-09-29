@@ -5,7 +5,7 @@ import User1 from "../pics/user1.jpg";
 import User2 from "../pics/user2.jpg";
 import User3 from "../pics/user3.jpg";
 
-const ReviewsCarrousel = () => {
+const ReviewsCarousel = () => {
   return (
     <Carousel
       showArrows={true}
@@ -51,4 +51,4 @@ const ReviewsCarrousel = () => {
   );
 };
 
-export default ReviewsCarrousel;
+export default ReviewsCarousel;

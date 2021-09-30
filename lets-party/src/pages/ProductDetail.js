@@ -5,9 +5,9 @@ import { useQuery } from '@apollo/client';
 import Basket from '../components/Basket';
 import { useStoreContext } from '../utils/GlobalState';
 import {
-  REMOVE_FROM_BASKET,
-  UPDATE_BASKET_QUANTITY,
-  ADD_TO_BASKET,
+  REMOVE_FROM_CART,
+  UPDATE_CART_QUANTITY,
+  ADD_TO_CART,
   UPDATE_PRODUCTS,
 } from '../utils/actions';
 import { QUERY_PRODUCTS } from '../utils/queries';
@@ -21,7 +21,7 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-  const { products, basket } = state;
+  const { products, cart } = state;
 
   useEffect(() => {
     if (products.length) {
@@ -47,39 +47,39 @@ function Detail() {
     }
   }, [products, data, loading, dispatch, id]);
 
-  const addToBasket = () => {
-    const itemInBasket = basket.find((basketItem) => basketItem._id === id);
-    if (itemInBasket) {
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === id);
+    if (itemInCart) {
       dispatch({
-        type: UPDATE_BASKET_QUANTITY,
+        type: UPDATE_CART_QUANTITY,
         _id: id,
-        purchaseQuantity: parseInt(itemInBasket.purchaseQuantity) + 1,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
-      idbPromise('basket', 'put', {
-        ...itemInBasket,
-        purchaseQuantity: parseInt(itemInBasket.purchaseQuantity) + 1,
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
     } else {
       dispatch({
-        type: ADD_TO_BASKET,
+        type: ADD_TO_CART,
         product: { ...currentProduct, purchaseQuantity: 1 },
       });
-      idbPromise('basket', 'put', { ...currentProduct, purchaseQuantity: 1 });
+      idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
     }
   };
 
-  const removeFromBasket = () => {
+  const removeFromCart = () => {
     dispatch({
-      type: REMOVE_FROM_BASKET,
+      type: REMOVE_FROM_CART,
       _id: currentProduct._id,
     });
 
-    idbPromise('basket', 'delete', { ...currentProduct });
+    idbPromise('cart', 'delete', { ...currentProduct });
   };
 
   return (
     <>
-      {currentProduct && basket ? (
+      {currentProduct && cart ? (
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
 
@@ -89,10 +89,10 @@ function Detail() {
 
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToBasket}>Add to Basket</button>
+            <button onClick={addToCart}>Add to Basket</button>
             <button
-              disabled={!basket.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromBasket}
+              disabled={!cart.find((p) => p._id === currentProduct._id)}
+              onClick={removeFromCart}
             >
               Remove from Basket
             </button>

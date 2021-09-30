@@ -24,17 +24,17 @@ const Basket = () => {
   }, [data]);
 
   useEffect(() => {
-    async function getBasket() {
-      const basket = await idbPromise('basket', 'get');
+    async function getCart() {
+      const cart = await idbPromise('cart', 'get');
       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     }
 
     if (!state.cart.length) {
-      getBasket();
+      getCart();
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleBasket() {
+  function toggleCart() {
     dispatch({ type: TOGGLE_CART });
   }
 
@@ -62,7 +62,7 @@ const Basket = () => {
 
   if (!state.cartOpen) {
     return (
-      <div className="cart-closed" onClick={toggleBasket}>
+      <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="trash">
           🛒
         </span>
@@ -72,7 +72,7 @@ const Basket = () => {
 
   return (
     <div className="basket">
-      <div className="close" onClick={toggleBasket}>
+      <div className="close" onClick={toggleCart}>
         [close]
       </div>
       <h2>Basket</h2>

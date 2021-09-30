@@ -235,12 +235,11 @@ nav ul li {
   cursor: pointer;
 }
 .port-img {
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  transition: transform 750ms, opacity 250ms linear;
 }
 
 .pro-image-box {
-  position: relative;
-  margin: 0.5rem;
+  margin: 25px;
 }
 .image-box-wrapper {
   display: flex !important;
@@ -329,6 +328,10 @@ nav ul li {
 
 .myCarousel p {
   color: var(--clr-light);
+  background: hotpink;
+  padding: 10px;
+  border-radius: 10px;
+
 }
 .carousel .slide img {
   width: 10rem !important;
@@ -342,6 +345,10 @@ nav ul li {
 .carousel-root {
   margin: auto !important;
   margin-top: 3% !important;
+}
+
+.pCarousel {
+  font-weight: bold;
 }
 /******footer***********/
 .footer {

@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="row align-items-start">
-            <div className="col ">
+            <div className="col">
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
@@ -29,7 +29,7 @@ const Footer = () => {
                 <Google />
               </a>
             </div>
-            <div className="col ">
+            <div className="col">
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
@@ -38,7 +38,7 @@ const Footer = () => {
                 <Facebook />
               </a>
             </div>
-            <div className="col ">
+            <div className="col">
               <a
                 href="https://www.twitter.com/"
                 target="_blank"
@@ -47,7 +47,7 @@ const Footer = () => {
                 <Twitter />
               </a>
             </div>
-            <div className="col ">
+            <div className="col">
               <a
                 href="https://www.reddit.com/"
                 target="_blank"
@@ -63,7 +63,7 @@ const Footer = () => {
           Copyright&copy; {new Date().getFullYear()}&nbsp; In One Basket | All
           Rights Reserved
         </p>
-        <p className="pt-3 text-center">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        <p className="pt-3 text-center"> Site Icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
       </div>
     </div>
   );

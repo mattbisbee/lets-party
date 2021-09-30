@@ -85,7 +85,7 @@ const Categories = () => {
                 <label for="carmel"></label>
               </div>
             </div>
-            <a className="link" onClick={() => window.open("#")}>
+            <a href="/" className="link" onClick={() => window.open("/basket")}>
               Add to the basket
             </a>
           </form>

@@ -19,7 +19,7 @@ const ReviewsCarousel = () => {
         <img src={User1} alt="John Doe" />
         <div className="myCarousel">
           <h3>John Doe</h3>
-          <p>
+          <p className ="pCarousel">
             I really love this website, I send a basket of chocolates, flowers
             and a teddy Bear to my now girlfriend, the basket was so cute and
             she love it! Thank you guys!
@@ -30,7 +30,7 @@ const ReviewsCarousel = () => {
         <img src={User2} alt="Bob Doe" />
         <div className="myCarousel">
           <h3>Bob Doe</h3>
-          <p>
+          <p className ="pCarousel">
             I bought a basket of cookies, journals and teddy bears to my grandma
             and she was very happy about, it was delivered on time.
           </p>
@@ -40,7 +40,7 @@ const ReviewsCarousel = () => {
         <img src={User3} alt="Mary Doe" />
         <div className="myCarousel">
           <h3>Mary Doe</h3>
-          <p>
+          <p className ="pCarousel">
             My mom was sick in the hospital and I couldn't visit her cuz I was
             out of Country but she received a basket of blanket, teddy bear,
             maccaroon and chocolates, I was so happy for it.

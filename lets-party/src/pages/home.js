@@ -1,10 +1,11 @@
 import Particles from "react-particles-js";
-import Nav from "../components/Nav";
 import Header from "../components/Header";
 import ReviewsCarrousel from "../components/Reviews";
 import Categories from "../components/Categories";
-import Footer from "../components/Footer";
 import About from "../components/About";
+import Products from "../pages/Product"
+
+
 function Home(){
 return (
     <>
@@ -29,12 +30,11 @@ return (
         },
       }}
     />
-    <Nav />
     <Header />
     <About />
     <Categories />
+    {/* <Products /> */}
     <ReviewsCarrousel />
-    <Footer />
   </>
 )
 }

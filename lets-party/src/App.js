@@ -9,17 +9,18 @@ import {
 import { StoreProvider } from './utils/GlobalState';
 import { setContext } from '@apollo/client/link/context';
 
-//import Particles from "react-particles-js";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
-import Product from "./pages/Product"
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./pages/Footer";
 import Nav from './components/Nav';
-import Categories from './components/Categories';
+import CategoryMenu from './components/CategoryMenu';
+import ProductDetail from './pages/ProductDetail';
+
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+//import Particles from "react-particles-js";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -52,8 +53,8 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/contact" component={Contact} />
-              <Route exact path="/product/:id" component={Product} />
-              <Route exact path="/categories" component={Categories} />
+              <Route exact path="/categoryMenu" component={CategoryMenu} />
+              <Route exact path="/products/:id" component={ProductDetail} />
             </Switch>
             <Footer />
           </StoreProvider>

@@ -10,6 +10,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Basket3Fill } from "react-bootstrap-icons";
 import { PersonFill } from "react-bootstrap-icons";
 import { HouseFill } from "react-bootstrap-icons";
+import { CardChecklist } from "react-bootstrap-icons";
 import { ChatTextFill } from 'react-bootstrap-icons';
 
 const linkStyle = {
@@ -50,6 +51,12 @@ function Nav() {
                 <li>
                   <Link to="/" style={linkStyle}>
                    <HouseFill /> Home
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/categoryMenu" style={linkStyle}>
+                   <CardChecklist /> Categories
                   </Link>
                 </li>
 

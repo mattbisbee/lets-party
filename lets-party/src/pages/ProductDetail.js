@@ -32,6 +32,7 @@ function Detail() {
         type: UPDATE_PRODUCTS,
         products: data.products,
       });
+
       data.products.forEach((product) => {
         idbPromise('products', 'put', product);
       });
@@ -80,7 +81,7 @@ function Detail() {
     <>
       {currentProduct && basket ? (
         <div className="container my-1">
-          <Link to="/">← Home</Link>
+          <Link to="/">← Back to Products</Link>
 
           <h2>{currentProduct.name}</h2>
 

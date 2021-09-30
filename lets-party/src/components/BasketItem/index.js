@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStoreContext } from "../../utils/GlobalState";
-import { REMOVE_FROM_BASKET, UPDATE_BASKET_QUANTITY } from "../../utils/actions";
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 const BasketItem = ({ item }) => {
@@ -9,10 +9,10 @@ const BasketItem = ({ item }) => {
 
   const removeFromBasket = item => {
     dispatch({
-      type: REMOVE_FROM_BASKET,
+      type: REMOVE_FROM_CART,
       _id: item._id
     });
-    idbPromise('basket', 'delete', { ...item });
+    idbPromise('cart', 'delete', { ...item });
 
   };
 
@@ -20,18 +20,18 @@ const BasketItem = ({ item }) => {
     const value = e.target.value;
     if (value === '0') {
       dispatch({
-        type: REMOVE_FROM_BASKET,
+        type: REMOVE_FROM_CART,
         _id: item._id
       });
-      idbPromise('basket', 'delete', { ...item });
+      idbPromise('cart', 'delete', { ...item });
 
     } else {
       dispatch({
-        type: UPDATE_BASKET_QUANTITY,
+        type: UPDATE_CART_QUANTITY,
         _id: item._id,
         purchaseQuantity: parseInt(value)
       });
-      idbPromise('basket', 'put', { ...item, purchaseQuantity: parseInt(value) });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
 
     }
   }

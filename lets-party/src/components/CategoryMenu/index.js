@@ -7,6 +7,8 @@ import {
 } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+// import ProductList from "../componenets/ProductList";
+
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -54,6 +56,7 @@ function CategoryMenu() {
           {item.name}
         </button>
       ))}
+      {/* <ProductList /> */}
     </div>
   );
 }

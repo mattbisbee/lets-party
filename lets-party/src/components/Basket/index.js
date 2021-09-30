@@ -6,7 +6,7 @@ import { idbPromise } from '../../utils/helpers';
 import BasketItem from '../BasketItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_BASKET, ADD_MULTIPLE_TO_BASKET } from '../../utils/actions';
+import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
@@ -26,21 +26,21 @@ const Basket = () => {
   useEffect(() => {
     async function getBasket() {
       const basket = await idbPromise('basket', 'get');
-      dispatch({ type: ADD_MULTIPLE_TO_BASKET, products: [...basket] });
+      dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     }
 
-    if (!state.basket.length) {
+    if (!state.cart.length) {
       getBasket();
     }
-  }, [state.basket.length, dispatch]);
+  }, [state.cart.length, dispatch]);
 
   function toggleBasket() {
-    dispatch({ type: TOGGLE_BASKET });
+    dispatch({ type: TOGGLE_CART });
   }
 
   function calculateTotal() {
     let sum = 0;
-    state.basket.forEach((item) => {
+    state.cart.forEach((item) => {
       sum += item.price * item.purchaseQuantity;
     });
     return sum.toFixed(2);
@@ -49,7 +49,7 @@ const Basket = () => {
   function submitCheckout() {
     const productIds = [];
 
-    state.basket.forEach((item) => {
+    state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         productIds.push(item._id);
       }
@@ -60,9 +60,9 @@ const Basket = () => {
     });
   }
 
-  if (!state.basketOpen) {
+  if (!state.cartOpen) {
     return (
-      <div className="basket-closed" onClick={toggleBasket}>
+      <div className="cart-closed" onClick={toggleBasket}>
         <span role="img" aria-label="trash">
           🛒
         </span>
@@ -76,9 +76,9 @@ const Basket = () => {
         [close]
       </div>
       <h2>Basket</h2>
-      {state.basket.length ? (
+      {state.cart.length ? (
         <div>
-          {state.basket.map((item) => (
+          {state.cart.map((item) => (
             <BasketItem key={item._id} item={item} />
           ))}
 

@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/mattbisbee/lets-party#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "concurrently": "^6.2.1"
   }
 }

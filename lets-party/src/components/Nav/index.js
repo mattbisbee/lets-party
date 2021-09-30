@@ -12,6 +12,7 @@ import { PersonFill } from "react-bootstrap-icons";
 import { HouseFill } from "react-bootstrap-icons";
 import { CardChecklist } from "react-bootstrap-icons";
 import { ChatTextFill } from 'react-bootstrap-icons';
+import { DoorOpenFill } from 'react-bootstrap-icons';
 
 const linkStyle = {
   margin: "5rem",
@@ -22,13 +23,59 @@ function Nav() {
   function displayNav() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="navbar-nav m-auto">
-          <li className="nav-item">
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-          </li>
-        </ul>
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+          <div className="container">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
+            </button>
+
+            <div
+              className="collapse navbar-collapse m-auto"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav m-auto">
+                <li>
+                  <Link to="/" style={linkStyle}>
+                    <HouseFill /> Home
+                  </Link>
+                </li>
+                
+                <li>
+                  <Link to="/categoryMenu" style={linkStyle}>
+                   <CardChecklist /> Categories
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/contact" style={linkStyle}>
+                    <ChatTextFill /> Contact
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/basket" style={linkStyle}>
+                    <Basket3Fill /> Basket
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/" style={linkStyle} onClick={() => Auth.logout()}>
+                    <DoorOpenFill /> Logout
+                  </Link>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
       );
     } else {
       return (

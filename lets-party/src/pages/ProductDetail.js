@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-
-import Basket from '../components/Basket';
 import { useStoreContext } from '../utils/GlobalState';
 import {
   REMOVE_FROM_CART,
@@ -13,7 +11,11 @@ import {
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 
-function Detail() {
+const linkStyle = {
+  textDecoration: "none"
+};
+
+function ProductDetail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
@@ -81,14 +83,15 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
 
           <h2>{currentProduct.name}</h2>
 
           <p>{currentProduct.description}</p>
 
           <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
+            <strong>Price:</strong> ${currentProduct.price}{' '}
+            <br></br>
+            <br></br>
             <button onClick={addToCart}>Add to Basket</button>
             <button
               disabled={!cart.find((p) => p._id === currentProduct._id)}
@@ -102,11 +105,18 @@ function Detail() {
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
+          <br></br>
+          <br></br>
+          <Link to="/" style={linkStyle}>Back to Home</Link>
+          <br></br>
+          <br></br>
+          <Link to="/categoryMenu" style={linkStyle}>Back to Categories</Link>
+          <br></br>
+          <br></br>
         </div>
       ) : null}
-      <Basket />
     </>
   );
 }
 
-export default Detail;
+export default ProductDetail;

@@ -1,6 +1,6 @@
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
-    const request = window.indexedDB.open('In One Basket', 1);
+    const request = window.indexedDB.open('InOneBasket', 1);
     let db, tx, store;
     request.onupgradeneeded = function(e) {
       const db = request.result;

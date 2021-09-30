@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import "../../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "hotpink"
+};
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -39,19 +46,22 @@ function ProductItem(item) {
   }
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
+    <div className="container my-1">
+      <Link style={linkStyle} to={`/products/${_id}`} >
         <img
           alt={name}
           src={`/images/${image}`}
+          className="productImage"
         />
         <p>{name}</p>
       </Link>
       <div>
-        <div>{quantity} {("item", quantity)} in stock</div>
+        <div> {("item", quantity)} in stock</div>
         <span>${price}</span>
       </div>
       <button onClick={addToCart}>Add to Basket</button>
+      <br></br>
+      <br></br>
     </div>
   );
 }

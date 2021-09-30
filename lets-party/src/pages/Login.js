@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
+import { LOGIN } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 const linkStyle = {
-  textDecoration: 'none',
-  color: 'blue'
+  textDecoration: "none",
+  color: "blue",
 };
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log({ email: formState.email, password: formState.password });
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
@@ -55,9 +56,9 @@ function Login(props) {
           <input
             type="password"
             className="form-control"
-            id="pwd"
+            id="password"
             placeholder="Enter password"
-            name="pswd"
+            name="password"
             onChange={handleChange}
           />
         </div>
@@ -72,7 +73,9 @@ function Login(props) {
         </button>
       </form>
       <br></br>
-      <Link to="/signup" style={linkStyle}>Go to Signup</Link>
+      <Link to="/signup" style={linkStyle}>
+        Go to Signup
+      </Link>
     </div>
   );
 }

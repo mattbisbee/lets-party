@@ -7,7 +7,8 @@ import BasketItem from '../BasketItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
-
+import './style.css';
+import { Basket3Fill } from "react-bootstrap-icons";
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -63,18 +64,19 @@ const Basket = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
+        <br></br>
         <span role="img" aria-label="trash">
-          🛒
+          <Basket3Fill />
+          <br></br>
+          Your Custom Basket
         </span>
       </div>
     );
   }
 
   return (
-    <div className="basket">
-      <div className="close" onClick={toggleCart}>
-        [close]
-      </div>
+    <div className="cart">
+      <br></br>
       <h2>Basket</h2>
       {state.cart.length ? (
         <div>
@@ -84,17 +86,21 @@ const Basket = () => {
 
           <div className="flex-row space-between">
             <strong>Total: ${calculateTotal()}</strong>
-
+            <br></br>
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button className="btn btn-primary btn-lg" onClick={submitCheckout}>Checkout</button>
             ) : (
-              <span>(log in to check out)</span>
+              <span> (Please log in to purchase)</span>
             )}
+            <br></br>
+            <button className="btn btn-primary btn-lg" onClick={toggleCart}>
+              Minimize Basket
+            </button>
           </div>
         </div>
       ) : (
         <h3>
-          There isn't anything in your basket!
+          Add items to your custom Gift Basket!
         </h3>
       )}
     </div>

@@ -10,6 +10,7 @@ import {
 } from '../utils/actions';
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
+import Basket from '../components/Basket';
 
 const linkStyle = {
   textDecoration: "none"
@@ -113,6 +114,7 @@ function ProductDetail() {
           <Link to="/categoryMenu" style={linkStyle}>Back to Categories</Link>
           <br></br>
           <br></br>
+          <Basket />
         </div>
       ) : null}
     </>

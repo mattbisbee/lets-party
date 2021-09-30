@@ -2,9 +2,6 @@ import Particles from "react-particles-js";
 import Header from "../components/Header";
 import ReviewsCarrousel from "../components/Reviews";
 import About from "../components/About";
-// import ProductList from "../components/ProductList";
-// import CategoryMenu from "../components/CategoryMenu";
-// import Categories from "../components/Categories";
 
 function Home(){
 return (
@@ -33,7 +30,6 @@ return (
     <Header />
     <About />
     <ReviewsCarrousel />
-    {/* <ProductList /> */}
   </>
 )
 }

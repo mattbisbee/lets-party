@@ -2,17 +2,16 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
-import '../../index.css'
-import "../../App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Basket3Fill } from "react-bootstrap-icons";
 import { PersonFill } from "react-bootstrap-icons";
 import { HouseFill } from "react-bootstrap-icons";
 import { CardChecklist } from "react-bootstrap-icons";
 import { ChatTextFill } from 'react-bootstrap-icons';
 import { DoorOpenFill } from 'react-bootstrap-icons';
+import '../../index.css'
+import "../../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const linkStyle = {
   margin: "5rem",
@@ -50,19 +49,13 @@ function Nav() {
                 
                 <li>
                   <Link to="/categoryMenu" style={linkStyle}>
-                   <CardChecklist /> Categories
+                   <CardChecklist /> Categories and Basket
                   </Link>
                 </li>
 
                 <li>
                   <Link to="/contact" style={linkStyle}>
                     <ChatTextFill /> Contact
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="/basket" style={linkStyle}>
-                    <Basket3Fill /> Basket
                   </Link>
                 </li>
 
@@ -103,7 +96,7 @@ function Nav() {
 
                 <li>
                   <Link to="/categoryMenu" style={linkStyle}>
-                   <CardChecklist /> Categories
+                   <CardChecklist /> Categories and Basket
                   </Link>
                 </li>
 
@@ -125,11 +118,6 @@ function Nav() {
                   </Link>
                 </li>
 
-                <li>
-                  <Link to="/basket" style={linkStyle}>
-                   <Basket3Fill /> Basket
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>

@@ -10,6 +10,7 @@ import { idbPromise } from '../../utils/helpers';
 import ProductList from "../../components/ProductList";
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Basket from "../../components/Basket";
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -61,7 +62,8 @@ function CategoryMenu() {
       ))}
       <br></br>
       <br></br>
-      < ProductList />
+      <ProductList />
+      <Basket />
     </div>
   );
 }

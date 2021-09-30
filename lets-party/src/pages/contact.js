@@ -10,7 +10,7 @@ function Contact(){
           <label for="exampleFormControlTextarea1" className="form-label">Comments</label>
           <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <button type="button" className="btn btn-outline-warning d-grid mx-auto mb-5">Sumbit</button>
+        <button type="button" className="btn btn-primary d-grid mx-auto mb-5">Sumbit</button>
       </>
     )
 }

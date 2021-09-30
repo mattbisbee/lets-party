@@ -23,6 +23,12 @@
   "homepage": "https://github.com/mattbisbee/lets-party#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "concurrently": "^6.2.1"
+    "concurrently": "^6.2.1",
+    "node": "^16.10.0",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4"
   }
 }

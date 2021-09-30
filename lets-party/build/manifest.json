@@ -1,0 +1,26 @@
+{
+  "short_name": "In One Basket",
+  "name": "In One Basket",
+  "description": "An app that lets you customize your next gift basket for any occasion.",
+  "icons": [
+    {
+      "src": "./icons/gift-basket128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./icons/gift-basket256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "./icons/gift-basket512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

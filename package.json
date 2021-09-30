@@ -5,7 +5,7 @@
     "node": "14.x",
     "npm": "6.x"
   },
-  "description": "",
+  "description": "## **Description**   In One Basket is your all stop shopping destination to create your custom gift basket for any occasion.",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",

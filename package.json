@@ -2,7 +2,8 @@
   "name": "lets-party",
   "version": "1.0.0",
   "engines": {
-    "node":"14.x"
+    "node": "14.x",
+    "npm": "6.x"
   },
   "description": "",
   "main": "server/server.js",
@@ -27,11 +28,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "concurrently": "^6.2.1",
-    "node": "^16.10.0",
-    "semver": "^7.3.5"
+    "express": "^4.17.1"
   },
-  "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/node": "^7.15.4"
-  }
+  "devDependencies": {}
 }

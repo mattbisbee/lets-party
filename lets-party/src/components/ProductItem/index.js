@@ -53,13 +53,14 @@ function ProductItem(item) {
           src={`/images/${image}`}
           className="productImage"
         />
-        <p>{name}</p>
+        <p className="categoryPara">{name}</p>
       </Link>
       <div>
         <div> {("item", quantity)} in stock</div>
         <span>${price}</span>
-      </div>
+        <br></br>
       <button onClick={addToCart}>Add to Basket</button>
+      </div>
       <br></br>
       <br></br>
     </div>

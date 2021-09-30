@@ -28,6 +28,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "concurrently": "^6.2.1",
+    "debug": "^4.3.2",
     "express": "^4.17.1"
   },
   "devDependencies": {}

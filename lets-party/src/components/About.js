@@ -17,8 +17,8 @@ const About = () => {
             gift baskets are filled with something for everyone on your list
             from chocolates, cookies, flowers, journals, Teddy Bears and
             Blankets. The only thing you need to add is a lot of Love!!!.
-            <p className="deli">WE DELIVER!!!</p>
           </p>
+          <p className="deli">WE DELIVER!!!</p>
         </div>
       </div>
     </div>

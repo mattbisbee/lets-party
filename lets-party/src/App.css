@@ -244,12 +244,18 @@ nav ul li {
 .image-box-wrapper {
   display: flex !important;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .text-uppercase {
     padding-top: 0;
     padding-bottom: 1rem !important;
   }
-}
+} */
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+ }
 /*********popupbox*************/
 
 .pro-img-popupbox {

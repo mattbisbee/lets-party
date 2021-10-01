@@ -4,10 +4,11 @@ import { Google } from "react-bootstrap-icons";
 import { Instagram } from "react-bootstrap-icons";
 import { Twitter } from "react-bootstrap-icons";
 import { Reddit } from "react-bootstrap-icons";
+import '../App.css'
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="container">
         <div className="row">
           <div className="row align-items-start">
@@ -65,7 +66,7 @@ const Footer = () => {
         </p>
         <p className="pt-3 text-center"> Site Icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
       </div>
-    </div>
+    </footer>
   );
 };
 

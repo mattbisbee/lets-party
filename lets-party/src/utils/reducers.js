@@ -3,12 +3,12 @@ import {
   UPDATE_PRODUCTS,
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
-  ADD_TO_BASKET,
-  ADD_MULTIPLE_TO_BASKET,
-  UPDATE_BASKET_QUANTITY,
-  REMOVE_FROM_BASKET,
-  CLEAR_BASKET,
-  TOGGLE_BASKET
+  ADD_TO_CART,
+  ADD_MULTIPLE_TO_CART,
+  UPDATE_CART_QUANTITY,
+  REMOVE_FROM_CART,
+  CLEAR_CART,
+  TOGGLE_CART
 } from "./actions";
 
 export const reducer = (state, action) => {
@@ -19,24 +19,24 @@ export const reducer = (state, action) => {
         products: [...action.products],
       };
 
-    case ADD_TO_BASKET:
+    case ADD_TO_CART:
       return {
         ...state,
-        basketOpen: true,
-        basket: [...state.basket, action.product],
+        cartOpen: true,
+        cart: [...state.cart, action.product],
       };
 
-    case ADD_MULTIPLE_TO_BASKET:
+    case ADD_MULTIPLE_TO_CART:
       return {
         ...state,
-        basket: [...state.basket, ...action.products],
+        cart: [...state.cart, ...action.products],
       };
 
-    case UPDATE_BASKET_QUANTITY:
+    case UPDATE_CART_QUANTITY:
       return {
         ...state,
-        basketOpen: true,
-        basket: state.basket.map(product => {
+        cartOpen: true,
+        cart: state.cart.map(product => {
           if (action._id === product._id) {
             product.purchaseQuantity = action.purchaseQuantity
           }
@@ -44,28 +44,28 @@ export const reducer = (state, action) => {
         })
       };
 
-    case REMOVE_FROM_BASKET:
-      let newState = state.basket.filter(product => {
+    case REMOVE_FROM_CART:
+      let newState = state.cart.filter(product => {
         return product._id !== action._id;
       });
 
       return {
         ...state,
-        basketOpen: newState.length > 0,
-        basket: newState
+        cartOpen: newState.length > 0,
+        cart: newState
       };
 
-    case CLEAR_BASKET:
+    case CLEAR_CART:
       return {
         ...state,
-        basketOpen: false,
-        basket: []
+        cartOpen: false,
+        cart: []
       };
 
-    case TOGGLE_BASKET:
+    case TOGGLE_CART:
       return {
         ...state,
-        basketOpen: !state.basketOpen
+        cartOpen: !state.cartOpen
       };
 
     case UPDATE_CATEGORIES:

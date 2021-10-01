@@ -1,6 +1,5 @@
 import React from "react";
 import Typed from "react-typed";
-import Categories from "./Categories";
 
 const Header = () => {
   return (
@@ -24,11 +23,11 @@ const Header = () => {
           backSpeed={60}
           loop
         />
-        <div className="btn-list">
+        {/* <div className="btn-list">
           <a href={Categories} className="btn-contact">
             Shop Now
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

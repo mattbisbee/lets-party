@@ -6,8 +6,9 @@ import { idbPromise } from '../../utils/helpers';
 import BasketItem from '../BasketItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_BASKET, ADD_MULTIPLE_TO_BASKET } from '../../utils/actions';
-
+import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import './style.css';
+import { Basket3Fill } from "react-bootstrap-icons";
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -24,23 +25,23 @@ const Basket = () => {
   }, [data]);
 
   useEffect(() => {
-    async function getBasket() {
-      const basket = await idbPromise('basket', 'get');
-      dispatch({ type: ADD_MULTIPLE_TO_BASKET, products: [...basket] });
+    async function getCart() {
+      const cart = await idbPromise('cart', 'get');
+      dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     }
 
-    if (!state.basket.length) {
-      getBasket();
+    if (!state.cart.length) {
+      getCart();
     }
-  }, [state.basket.length, dispatch]);
+  }, [state.cart.length, dispatch]);
 
-  function toggleBasket() {
-    dispatch({ type: TOGGLE_BASKET });
+  function toggleCart() {
+    dispatch({ type: TOGGLE_CART });
   }
 
   function calculateTotal() {
     let sum = 0;
-    state.basket.forEach((item) => {
+    state.cart.forEach((item) => {
       sum += item.price * item.purchaseQuantity;
     });
     return sum.toFixed(2);
@@ -49,7 +50,7 @@ const Basket = () => {
   function submitCheckout() {
     const productIds = [];
 
-    state.basket.forEach((item) => {
+    state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         productIds.push(item._id);
       }
@@ -60,41 +61,46 @@ const Basket = () => {
     });
   }
 
-  if (!state.basketOpen) {
+  if (!state.cartOpen) {
     return (
-      <div className="basket-closed" onClick={toggleBasket}>
+      <div className="cart-closed" onClick={toggleCart}>
+        <br></br>
         <span role="img" aria-label="trash">
-          🛒
+          <Basket3Fill />
+          <br></br>
+          Your Custom Basket
         </span>
       </div>
     );
   }
 
   return (
-    <div className="basket">
-      <div className="close" onClick={toggleBasket}>
-        [close]
-      </div>
+    <div className="cart">
+      <br></br>
       <h2>Basket</h2>
-      {state.basket.length ? (
+      {state.cart.length ? (
         <div>
-          {state.basket.map((item) => (
+          {state.cart.map((item) => (
             <BasketItem key={item._id} item={item} />
           ))}
 
           <div className="flex-row space-between">
             <strong>Total: ${calculateTotal()}</strong>
-
+            <br></br>
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button className="btn btn-primary btn-lg" onClick={submitCheckout}>Checkout</button>
             ) : (
-              <span>(log in to check out)</span>
+              <span> (Please log in to purchase)</span>
             )}
+            <br></br>
+            <button className="btn btn-primary btn-lg" onClick={toggleCart}>
+              Minimize Basket
+            </button>
           </div>
         </div>
       ) : (
         <h3>
-          There isn't anything in your basket!
+          Add items to your custom Gift Basket!
         </h3>
       )}
     </div>

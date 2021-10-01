@@ -35,6 +35,12 @@
   
   https://github.com/mattbisbee
 
+  Trilogy Module 20: React
+
+  Trilogy Module 21: MERN
+
+  Trilogy Module 22: State
+
   ## **License**
   ![License](https://img.shields.io/badge/License-MIT-orange?style=plastic&logo=appveyor.svg)
   <br>

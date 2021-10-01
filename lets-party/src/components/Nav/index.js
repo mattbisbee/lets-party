@@ -9,6 +9,8 @@ import { HouseFill } from "react-bootstrap-icons";
 import { CardChecklist } from "react-bootstrap-icons";
 import { ChatTextFill } from 'react-bootstrap-icons';
 import { DoorOpenFill } from 'react-bootstrap-icons';
+
+
 import '../../index.css'
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,18 +26,6 @@ function Nav() {
       return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
           <div className="container">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              // aria-label="Toggle navigation"
-            >
-              <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
-            </button>
-
             <div
               className="collapse navbar-collapse m-auto"
               id="navbarSupportedContent"
@@ -74,51 +64,39 @@ function Nav() {
       return (
           <nav className="navbar navbar-expand-lg navbar-light bg-dark">
             <div className="container">
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
-              </button>
+              <div className="collapse navbar-collapse m-auto" id="navbarSupportedContent">
+                <ul className="navbar-nav m-auto">
+                  <li>
+                    <Link to="/" style={linkStyle}>
+                    <HouseFill /> Home
+                    </Link>
+                  </li>
 
-            <div className="collapse navbar-collapse m-auto" id="navbarSupportedContent">
-              <ul className="navbar-nav m-auto">
-                <li>
-                  <Link to="/" style={linkStyle}>
-                   <HouseFill /> Home
-                  </Link>
-                </li>
+                  <li>
+                    <Link to="/categoryMenu" style={linkStyle}>
+                    <CardChecklist /> Categories and Basket
+                    </Link>
+                  </li>
 
-                <li>
-                  <Link to="/categoryMenu" style={linkStyle}>
-                   <CardChecklist /> Categories and Basket
-                  </Link>
-                </li>
+                  <li>
+                    <Link to="/signup" style={linkStyle}>
+                      <PersonFill /> Signup
+                    </Link>
+                  </li>
 
-                <li>
-                  <Link to="/signup" style={linkStyle}>
-                    <PersonFill /> Signup
-                  </Link>
-                </li>
+                  <li>
+                    <Link to="/login" style={linkStyle}>
+                    <PersonFill /> Login
+                    </Link>
+                  </li>
 
-                <li>
-                  <Link to="/login" style={linkStyle}>
-                  <PersonFill /> Login
-                  </Link>
-                </li>
+                  <li>
+                    <Link to="/contact" style={linkStyle}>
+                      <ChatTextFill /> Contact
+                    </Link>
+                  </li>
 
-                <li>
-                  <Link to="/contact" style={linkStyle}>
-                    <ChatTextFill /> Contact
-                  </Link>
-                </li>
-
-              </ul>
+                </ul>
             </div>
           </div>
         </nav>

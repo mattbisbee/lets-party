@@ -59,7 +59,7 @@ function ProductItem(item) {
         <div> {("item", quantity)} in stock</div>
         <span>${price}</span>
         <br></br>
-      <button onClick={addToCart}>Add to Basket</button>
+      <button onClick={addToCart} class="btn btn-primary">Add to Basket</button>
       </div>
       <br></br>
       <br></br>

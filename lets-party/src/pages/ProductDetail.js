@@ -93,8 +93,9 @@ function ProductDetail() {
             <strong>Price:</strong> ${currentProduct.price}{' '}
             <br></br>
             <br></br>
-            <button onClick={addToCart}>Add to Basket</button>
+            <button onClick={addToCart} class="btn btn-primary">Add to Basket</button>
             <button
+              class="btn btn-primary"
               disabled={!cart.find((p) => p._id === currentProduct._id)}
               onClick={removeFromCart}
             >

@@ -15,7 +15,7 @@ body {
   margin: 0px;
   min-height: 100%;
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 300px;
   background-color:#C9E9EC !important;
 }
 
@@ -37,6 +37,7 @@ body {
 nav {
   z-index: 2;
 }
+
 
 /*****menu links**********************/
 

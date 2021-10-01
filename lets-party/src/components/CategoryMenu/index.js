@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useStoreContext } from '../../utils/GlobalState';
+import { QUERY_CATEGORIES } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
+
+import ProductList from "../../components/ProductList";
+import Basket from "../../components/Basket";
+
+import "../../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
 } from '../../utils/actions';
-import { QUERY_CATEGORIES } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
-import ProductList from "../../components/ProductList";
-import "../../App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Basket from "../../components/Basket";
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();

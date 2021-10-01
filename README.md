@@ -24,7 +24,7 @@
   ## **Usage**
   Open the link to Heroku to view the app (add link here)
   
-  https://dashboard.heroku.com/apps/serene-temple-68982/resources 
+  https://serene-temple-68982.herokuapp.com/
 
   ## **Credits**
   https://github.com/carinvid

@@ -64,7 +64,7 @@ function Signup(props) {
             />
           </div>
           <div className="form-group">
-            <label for="email">Email:</label>
+            <label htmlFor="email">Email:</label>
             <input
               type="email"
               placeholder="Enter email"
@@ -75,7 +75,7 @@ function Signup(props) {
             />
           </div>
           <div className="form-group">
-            <label for="pwd">Password:</label>
+            <label htmlFor="pwd">Password:</label>
             <input
               placeholder="Enter password"
               name="password"

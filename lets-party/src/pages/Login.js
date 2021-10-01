@@ -41,7 +41,7 @@ function Login(props) {
       <h1>My Account</h1>
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
-          <label for="email">Email:</label>
+          <label htmlFor="email">Email:</label>
           <input
             type="email"
             className="form-control"
@@ -52,7 +52,7 @@ function Login(props) {
           />
         </div>
         <div className="form-group">
-          <label for="pwd">Password:</label>
+          <label htmlFor="pwd">Password:</label>
           <input
             type="password"
             className="form-control"

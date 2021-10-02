@@ -95,7 +95,7 @@ function ProductDetail() {
             <br></br>
             <button onClick={addToCart} class="btn btn-primary">Add to Basket</button>
             <button
-              class="btn btn-primary"
+              className="btn btn-primary"
               disabled={!cart.find((p) => p._id === currentProduct._id)}
               onClick={removeFromCart}
             >

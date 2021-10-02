@@ -9,8 +9,11 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 import { Basket3Fill } from "react-bootstrap-icons";
+require("dotenv").config();
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
+const stripePromise = process.env.stripePromise;
+
 
 const Basket = () => {
   const [state, dispatch] = useStoreContext();

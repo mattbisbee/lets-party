@@ -1,5 +1,6 @@
 import decode from 'jwt-decode';
 
+//code for jsonwebtoekn authentication
 class AuthService {
   getProfile() {
     return decode(this.getToken());

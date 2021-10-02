@@ -4,7 +4,9 @@ import { useProductReducer } from './reducers'
 const StoreContext = createContext();
 const { Provider } = StoreContext;
 
+//provider function that manages and updates the state using the useProductReducer
 const StoreProvider = ({ value = [], ...props }) => {
+  //everytime this function executes we will get two items: state (current version of state), and dispatch (the method used to update state)
   const [state, dispatch] = useProductReducer({
     products: [],
     cart: [],

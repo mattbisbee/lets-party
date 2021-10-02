@@ -1,6 +1,7 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
 
+//seed data that contains all our products that will display on the poroduct and category page
 db.once('open', async () => {
     await Category.deleteMany();
 

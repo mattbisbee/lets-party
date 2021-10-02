@@ -1,25 +1,26 @@
+
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
     const request = window.indexedDB.open('InOneBasket', 1);
     let db, tx, store;
-    request.onupgradeneeded = function(e) {
+    request.onupgradeneeded = function(event) {
       const db = request.result;
       db.createObjectStore('products', { keyPath: '_id' });
       db.createObjectStore('categories', { keyPath: '_id' });
       db.createObjectStore('cart', { keyPath: '_id' });
     };
 
-    request.onerror = function(e) {
+    request.onerror = function(event) {
       console.log('There was an error');
     };
 
-    request.onsuccess = function(e) {
+    request.onsuccess = function(event) {
       db = request.result;
       tx = db.transaction(storeName, 'readwrite');
       store = tx.objectStore(storeName);
 
-      db.onerror = function(e) {
-        console.log('error', e);
+      db.onerror = function(event) {
+        console.log('error', event);
       };
 
       switch (method) {

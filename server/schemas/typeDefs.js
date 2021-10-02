@@ -1,5 +1,6 @@
 const { gql } = require("apollo-server-express");
 
+// Type Definitions: Define all the data that the client can expect to use through queries and mutations
 const typeDefs = gql`
   type Category {
     _id: ID

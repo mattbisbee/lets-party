@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+// GraphQL mutations that perform POST, PUT, and DELETE requests  to create or change information through the GraphQL API
 export const LOGIN = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {

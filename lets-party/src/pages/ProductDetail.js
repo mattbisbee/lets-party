@@ -16,6 +16,7 @@ const linkStyle = {
   textDecoration: "none"
 };
 
+//function for the product detail screen. If you click on the item, this is the page that renders for just the item you want to view. This also contains code to add to basket and remove from basket since this function is availble in this screen as well.
 function ProductDetail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -80,6 +81,7 @@ function ProductDetail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+  //This is what will render, depending on the item you click on the categoryMenu screen
   return (
     <>
       {currentProduct && cart ? (

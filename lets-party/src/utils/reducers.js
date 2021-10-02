@@ -11,6 +11,7 @@ import {
   TOGGLE_CART
 } from "./actions";
 
+// reducer function that carries out the action to update state. This lists all the actions that will update state using switch
 export const reducer = (state, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:

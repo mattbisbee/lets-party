@@ -1,6 +1,7 @@
 import React from "react";
 import basket5 from "../pics/basket5.jpg";
 
+//renders the html for the 'about section' on the homepage
 const About = () => {
   return (
     <div id="about" className="container py-5">

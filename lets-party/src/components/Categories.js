@@ -1,3 +1,4 @@
+//These were modals that we might want to try to do later instead of having a page for the items. This would make the page shorter. Just in case we want to use this code later we saved it here.
 // import React from "react";
 // import Chocolates from "../pics/chocolates.jpg";
 // import Flowers from "../pics/flowers.jpg";

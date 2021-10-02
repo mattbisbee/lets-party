@@ -6,11 +6,13 @@ import { idbPromise } from "../../utils/helpers";
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//style the links
 const linkStyle = {
   textDecoration: "none",
   color: "hotpink"
 };
 
+// function to add product to cart
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
@@ -45,6 +47,7 @@ function ProductItem(item) {
     }
   }
 
+  // will render this html complete with a link to view the product individually
   return (
     <div className="container my-1">
       <Link style={linkStyle} to={`/products/${_id}`} >

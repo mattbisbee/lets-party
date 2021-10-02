@@ -2,8 +2,8 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { PersonFill } from "react-bootstrap-icons";
 import { HouseFill } from "react-bootstrap-icons";
 import { CardChecklist } from "react-bootstrap-icons";
@@ -21,7 +21,9 @@ const linkStyle = {
 };
 
 function Nav() {
+  //display Nav function
   function displayNav() {
+    //if the user is signed up and logged in, the following will render
     if (Auth.loggedIn()) {
       return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -61,6 +63,7 @@ function Nav() {
         </nav>
       );
     } else {
+      //if the user is not signed up or signed in, the following will render
       return (
           <nav className="navbar navbar-expand-lg navbar-light bg-dark">
             <div className="container">
@@ -104,6 +107,7 @@ function Nav() {
     }
   }
 
+  //return html using the displayNav function
   return (
     <header className="flex-row px-1">
       <nav>

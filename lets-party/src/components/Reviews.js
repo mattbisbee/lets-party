@@ -1,6 +1,7 @@
 import React from "react";
 import ReviewsCarousel from "./ReviewsCarousel";
 
+//renders the review section on the homepage
 const Reviews = () => {
   return (
     <div className="reviews">

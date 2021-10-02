@@ -19,6 +19,7 @@ const Basket = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
+  //useEffect for checkout and stripe
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -27,6 +28,7 @@ const Basket = () => {
     }
   }, [data]);
 
+  // useEffect for adding to cart
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -42,6 +44,7 @@ const Basket = () => {
     dispatch({ type: TOGGLE_CART });
   }
 
+  //function to calculate the total price for the items in the basket
   function calculateTotal() {
     let sum = 0;
     state.cart.forEach((item) => {
@@ -49,10 +52,11 @@ const Basket = () => {
     });
     return sum.toFixed(2);
   }
-
+  //Checkout with all items in cart
   function submitCheckout() {
     const productIds = [];
 
+    //for loop over items in cart
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         productIds.push(item._id);
@@ -63,7 +67,7 @@ const Basket = () => {
       variables: { products: productIds },
     });
   }
-
+  //code to display minimized basket
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
@@ -76,7 +80,7 @@ const Basket = () => {
       </div>
     );
   }
-
+  //return html for complete render of all items in basket
   return (
     <div className="cart">
       <br></br>
@@ -102,6 +106,7 @@ const Basket = () => {
           </div>
         </div>
       ) : (
+        //display a message for an empty basket
         <h3>
           Add items to your custom Gift Basket!
         </h3>

@@ -1,10 +1,10 @@
 const { User, Product, Category, Order } = require("../models");
 const { signToken } = require("../utils/auth");
 const { AuthenticationError } = require("apollo-server-express");
-const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
-
+// const stripe = require("stripe")("testtokenhere");
 //require('dotenv').config();
 
+// Resolvers: function to connect to each query or mutation type def that performs the CRUD actions
 const resolvers = {
   Query: {
     categories: async () => {

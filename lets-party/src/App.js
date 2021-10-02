@@ -1,5 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
+// ApolloClient is a contructor function that will initialize the connection to the GraphQL API server
+// InMemoryCache lets the Apollo Client instance to cache API response information
+// Apollo Provider is a React component that will be used to provide data to all the other components
+// createHttpLink is like middleware that allows control over how the Apollo Client makes requests
 import {
   ApolloClient,
   InMemoryCache,

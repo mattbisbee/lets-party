@@ -8,11 +8,10 @@ import { idbPromise } from '../../utils/helpers';
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//function to display each product
 function ProductList() {
   const [state, dispatch] = useStoreContext();
-
   const { currentCategory } = state;
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
@@ -34,6 +33,7 @@ function ProductList() {
     }
   }, [data, loading, dispatch]);
 
+  //filter products by category
   function filterProducts() {
     if (!currentCategory) {
       return state.products;
@@ -44,6 +44,7 @@ function ProductList() {
     );
   }
 
+  //rendered html that will display each item on the categoryMenu page using the ProductItem link
   return (
     <div className="my-2">
       <h2 className="catH2">Basket Options:</h2>
@@ -61,6 +62,7 @@ function ProductList() {
           ))}
         </div>
       ) : (
+        //This will display if the database has not been seeded
         <h3>You haven't added any products yet!</h3>
       )}
     </div>

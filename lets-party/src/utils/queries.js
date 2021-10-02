@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+//GraphQL queries to perform GET requests from the GraphQL API
 export const QUERY_PRODUCTS = gql`
   query getProducts($category: ID) {
     products(category: $category) {

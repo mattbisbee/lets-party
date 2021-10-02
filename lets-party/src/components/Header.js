@@ -1,6 +1,7 @@
 import React from "react";
 import Typed from "react-typed";
 
+//renders the header for the homepage
 const Header = () => {
   return (
     <div className="header-wraper">
@@ -23,11 +24,6 @@ const Header = () => {
           backSpeed={60}
           loop
         />
-        {/* <div className="btn-list">
-          <a href={Categories} className="btn-contact">
-            Shop Now
-          </a>
-        </div> */}
       </div>
     </div>
   );

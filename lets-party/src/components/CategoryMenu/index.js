@@ -15,6 +15,7 @@ import {
   UPDATE_CURRENT_CATEGORY,
 } from '../../utils/actions';
 
+
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
@@ -41,6 +42,7 @@ function CategoryMenu() {
     }
   }, [categoryData, loading, dispatch]);
 
+  //update what is shown depending on what is selected
   const handleClick = (id) => {
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,

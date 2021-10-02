@@ -5,10 +5,12 @@ import { idbPromise } from "../../utils/helpers";
 import { Trash2Fill } from 'react-bootstrap-icons';
 import '../Basket/style.css';
 
+//code for individual items in basket
 const BasketItem = ({ item }) => {
 
   const [, dispatch] = useStoreContext();
 
+  //remove item from basket
   const removeFromCart = item => {
     dispatch({
       type: REMOVE_FROM_CART,
@@ -18,8 +20,9 @@ const BasketItem = ({ item }) => {
 
   };
 
-  const onChange = (e) => {
-    const value = e.target.value;
+  //update the quantity displayed in basket
+  const onChange = (event) => {
+    const value = event.target.value;
     if (value === '0') {
       dispatch({
         type: REMOVE_FROM_CART,
@@ -38,6 +41,7 @@ const BasketItem = ({ item }) => {
     }
   }
 
+  //return html to render basket
   return (
     <div className="flex-row">
       <div className="container">
